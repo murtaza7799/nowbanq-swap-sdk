@@ -1,5 +1,5 @@
 {
-  "name": "@pancakeswap/sdk",
+  "name": "nowbanq-sdk",
   "license": "MIT",
   "version": "2.4.3",
   "description": "🛠 An SDK for building applications on top of Pancakeswap.",
@@ -8,21 +8,19 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/pancakeswap/pancake-swap-sdk.git",
-  "keywords": [
-    "pancakeswap",
-    "bsc"
-  ],
+ 
   "module": "dist/sdk.esm.js",
   "scripts": {
     "lint": "tsdx lint src test",
-    "build": "tsdx build",
+    "build": "rm -rf ./../nowbanq-frontend/node_modules/@pancakeswap/sdk/dist && tsdx build && copyfiles -a  ./dist/** ./../nowbanq-frontend/node_modules/@pancakeswap/sdk",
     "start": "tsdx watch",
+    "mergesdk": "copyfiles -a  ./dist/** ./../nowbanq-frontend/nowbanq/sdk",
     "test": "tsdx test",
     "prepublishOnly": "tsdx build"
   },
   "dependencies": {
     "big.js": "^5.2.2",
+    "copyfiles": "^2.4.1",
     "decimal.js-light": "^2.5.0",
     "jsbi": "^3.1.4",
     "tiny-invariant": "^1.1.0",
