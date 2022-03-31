@@ -14,7 +14,7 @@
     "lint": "tsdx lint src test",
     "build": "rm -rf ./../nowbanq-frontend/node_modules/@pancakeswap/sdk/dist && tsdx build && copyfiles -a  ./dist/** ./../nowbanq-frontend/node_modules/@pancakeswap/sdk",
     "start": "tsdx watch",
-    "mergesdk": "copyfiles -a  ./dist/** ./../nowbanq-frontend/nowbanq/sdk",
+    "mergesdk": "copyfiles -a  ./dist/**  ./../nowbanq-frontend/nowbanq/sdk",
     "test": "tsdx test",
     "prepublishOnly": "tsdx build"
   },
