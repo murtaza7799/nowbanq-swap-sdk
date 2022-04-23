@@ -11,9 +11,9 @@
   "module": "dist/sdk.esm.js",
   "scripts": {
     "lint": "tsdx lint src test",
-    "build": "rm -rf ./sdk/dist && rm -rf ./../nowbanq-frontend/nowbanq/sdk/dist && tsdx build && cp -r  ./dist  ./../nowbanq-frontend/nowbanq/sdk/dist",
+    "build": "rm -rf ./sdk/dist && rm -rf ./../nowbanq/sdk/dist && tsdx build && cp -r  ./dist  ./../nowbanq/sdk/dist",
     "start": "tsdx watch",
-    "mergesdk": "copyfiles -a  ./dist/**  ./../nowbanq-frontend/nowbanq/sdk/*",
+    "mergesdk": "copyfiles -a  ./dist/**  ./../nowbanq/sdk/*",
     "test": "tsdx test",
     "prepublishOnly": "tsdx build"
   },
